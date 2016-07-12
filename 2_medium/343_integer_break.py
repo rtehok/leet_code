@@ -9,7 +9,7 @@ class Solution(object):
 		records[1] = 1
 		
 		for i in range(2,n+1):
-			for j in range(1,i):
+			for j in range(1,i//2+1):
 				records[i] = max(records[i], ( j * ( max(i-j,records[i-j]) ) ) )
 		return records
 		
